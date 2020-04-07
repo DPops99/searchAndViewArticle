@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Articles</title>
+    <style>
+        .articles{
+            background-color: black;
+            color: white;
+            margin: 20px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Articles</h1>
+    <tr th:each="names: ${reslut.apiJsonConverter}">
+        <div class="articles">
+            <h2 th:text="${names.getFirstParameter()}" />
+            <p><a th:href="${names.getSecondParameter()}">Click here to view the article</a></p>
+        </div>
+    </tr>
+</body>
+</html>
