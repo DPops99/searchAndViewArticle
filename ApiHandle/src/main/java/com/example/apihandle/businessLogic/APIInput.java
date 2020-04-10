@@ -1,9 +1,7 @@
 package com.example.apihandle.businessLogic;
 
-import com.example.apihandle.models.View;
+import com.example.apihandle.models.API_JSONConverter;
 import org.springframework.web.client.RestTemplate;
-
-import java.io.IOException;
 
 public class APIInput {
 
@@ -24,8 +22,8 @@ public class APIInput {
 
     public String convertToTagURL(FeedElement feedElement){
         //converts searchInput into a JSON to filter articles
-        final String devApiURL = "https://dev.to/api/articles";
-        return devApiURL+"?tag="+feedElement.toString();
+
+        return feedElement.toString();
     }
 
     public API_JSONConverter[] sendJSON(String URL){

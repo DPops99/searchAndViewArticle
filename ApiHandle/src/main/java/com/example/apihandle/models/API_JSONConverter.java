@@ -1,4 +1,4 @@
-package com.example.apihandle.businessLogic;
+package com.example.apihandle.models;
 
 import com.example.apihandle.models.View;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;

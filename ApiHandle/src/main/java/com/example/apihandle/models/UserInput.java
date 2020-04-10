@@ -6,13 +6,17 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
-@JsonIgnoreProperties(ignoreUnknown = true)
+
 public class UserInput {
 
+    final String devApiURL = "https://dev.to/api/articles";
     private String input;
     private final Type type = Type.TAG;
 
 
+    public String getDevApiURL() {
+        return devApiURL;
+    }
 
     public String getInput() {
         return input;
@@ -28,6 +32,6 @@ public class UserInput {
 
     @Override
     public String toString(){
-        return getInput();
+        return getDevApiURL()+"?"+getType().toString().toLowerCase()+"="+getInput();
     }
 }
